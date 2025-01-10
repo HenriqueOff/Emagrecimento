@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Responsiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="section1">
+        <div class="content">
+            <h1>Chega de Dietas! Emagreça de uma vez por todas</h1>
+            <h2>Descubra como transformar sua vida e alcançar o emagrecimento definitivo sem sacrifícios impossíveis!</h2>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="content">
+            <p>Descubra como transformar sua relação com a comida e alcançar seus objetivos de emagrecimento de forma eficaz e sustentável! Este guia completo aborda a conscientização alimentar, a importância da hidratação e qualidade do sono, dicas práticas para gerenciar o estresse, incorporar exercícios ao seu dia a dia e evitar armadilhas comuns das dietas da moda.</p>
+            <p>Com estratégias simples e realistas, você aprenderá a construir hábitos que promovam a saúde física e mental, enquanto alcança uma vida mais equilibrada e feliz.</p>
+            <button class="redirecionar-btn">QUERO ALCANÇAR MEUS OBJETIVOS!</button>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="content">
+            <h1>Por que este guia é diferente?</h1>
+            <h2>O "Guia para Emagrecer de Forma Saudável" é uma solução definitiva para quem busca resultados reais e duradouros. Com ele você aprenderá:</h2>
+            <ul>
+                <li>Como construir hábitos saudáveis ​​e sustentáveis ​​sem abrir a mão do prazer à mesa.</li>
+                <li>Estratégias simples e práticas para transformar seu estilo de vida e alcançar seu peso ideal.</li>
+                <li>Como evitar o efeito sanfona e finalmente se libertar das dietas restritivas.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="content">
+            <h1>Diga adeus à frustração e conquiste o corpo e a vida que você merece!</h1>
+            <h2>Com este guia, você terá tudo o que precisa para:</h2>
+            <ul>
+                <li>Reconhecer e superar os obstáculos que te impedem de emagrecer.</li>
+                <li>Descobrir a satisfação de comer bem e viver melhor.</li>
+                <li>Criar um estilo de vida equilibrado, sem sacrifícios impossíveis.</li>
+            </ul>
+            <button class="redirecionar-btn">QUERO CONQUISTAR UMA VIDA SAUDÁVEL!</button>
+        </div>
+    </section>
+    <section id="section5">
+        <div class="content">
+            <h1>Bônus Exclusivo</h1>
+            <p>Na compra do e-book, leve gratuitamente um outro 
+                e-book com 10 receitas de alimentos saudáveis ​​para começar sua jornada com ainda mais sabor e praticidade.</p>
+            <picture>
+                <source srcset="10receitas-small.png" media="(max-width: 800px)">
+                <source srcset="10receitas-medium.png" media="(max-width: 1367px)">
+                <source srcset="10receitas-large.jpg" media="(min-width: 1368px)">
+                <img src="10receitas-big.png" alt="Imagem da Seção 5" class="responsive">
+            </picture>
+        </div>
+    </section>
+    <section id="section6" style="background-image: url('imagemfundo2.png');">
+        <h1>Este não é apenas um manual de perda de peso, é um convite para uma transformação completa no seu estilo de vida!</h1>
+        <div class="box">
+            <p>Apenas R$39,90!</p>
+        </div>
+        <p>Chegou a hora de dizer SIM para a sua transformação.</p>
+    </section>
+    <section id="section7">
+        <div class="content">
+            <h1>Clique no botão abaixo e comece agora sua jornada para o emagrecimento definitivo!</h1>
+            <button class="redirecionar-btn">Quero o Emagrecimento Definitivo!</button>
+            <p>Se você já está cansado das inúmeras dietas milagrosas, planos alimentares complicados ou métodos que parecem impossíveis de sustentar, este 
+                e-book é para você!</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        // URL de redirecionamento
+        const urlDeDestino = 'https://pay.kiwify.com.br/ESzr58V';
+
+        // Seletor para os botões com a classe 'redirecionar-btn'
+        const botoes = document.querySelectorAll('.redirecionar-btn');
+
+        // Adiciona o ouvinte de evento de clique em cada botão
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                window.location.href = urlDeDestino;
+            });
+        });
+    </script>
+</body>
+</html>
