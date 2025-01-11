@@ -272,21 +272,22 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: left; /* Alinha o texto à esquerda */
     padding: 2rem;
 }
 
 #section6 .content {
     display: grid;
-    gap: 1rem;
+    gap: 3rem;
     background: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semitransparente para melhor legibilidade */
     padding: 2rem;
     border-radius: 0.5rem;
+    align-items: flex-start;
 }
 
 #section6 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     margin: 0 0 1rem 0;
     font-family: 'Georgia', serif;
@@ -297,6 +298,7 @@ section {
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    margin-left: 0;
 }
 
 #section6 .box p {
@@ -367,7 +369,7 @@ section {
     opacity: 0; /* Garante que comece invisível */
 }
 /* Para telas de notebook pequenas a médias (1024px a 1366px) */
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1469px) {
     body {
         font-size: 1.1rem;
     }
@@ -378,9 +380,9 @@ section {
     #section1 {
         justify-content: flex-end; /* Posiciona o conteúdo na parte de baixo */
     }
-    #section1 .content, #section3 .content, #section4 .content, #section5 .content, #section6 .content, #section7 .content {
+    #section1 .content, #section3 .content, #section4 .content, #section5 .content, #section7 .content {
         display: grid; /* Complementar ao grid */
-        gap: 0.8rem;
+        gap: 3rem;
     }
     #section2 .content {
         display: grid; /* Garantindo que Grid é usado */
@@ -409,7 +411,14 @@ section {
     #section2 button {
         padding: 0.3rem 0.8rem; /* Reduz o preenchimento do botão */
         font-size: 1.2rem; /* Reduz o tamanho da fonte */
-        max-width: 300px; /* Define um tamanho máximo para o botão */
+        max-width: 20rem; /* Define um tamanho máximo para o botão */
+        width: auto; /* Faz o botão ter tamanho adaptativo */
+        margin: 1rem auto; /* Centraliza o botão horizontalmente */
+    }
+    #section4 button {
+        padding: 0.3rem 0.8rem; /* Reduz o preenchimento do botão */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        max-width: 18rem; /* Define um tamanho máximo para o botão */
         width: auto; /* Faz o botão ter tamanho adaptativo */
         margin: 1rem auto; /* Centraliza o botão horizontalmente */
     }
@@ -432,15 +441,29 @@ section {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start; /* Alinha a imagem ao topo */
-        margin-top: -10rem; /* Move a imagem mais para cima */
+        margin-top: -15rem; /* Move a imagem mais para cima */
     }
     #section5 picture img {
         max-width: 50%; /* Limita a largura máxima da imagem a 50% */
     }
+    #section6 .content{
+        display: grid !important; /* Complementar ao grid */
+        gap: 5rem !important;
+    }
+    #section6 .content > * {
+        margin-bottom: 5rem; /* Adiciona espaço entre os elementos */
+    }
+    #section7 button {
+        padding: 0.3rem 0.8rem; /* Reduz o preenchimento do botão */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        max-width: 20rem; /* Define um tamanho máximo para o botão */
+        width: auto; /* Faz o botão ter tamanho adaptativo */
+        margin: 1rem auto; /* Centraliza o botão horizontalmente */
+    }
 }
 
 /* Para telas de notebook grandes a desktops pequenos (1367px a 1919px) */
-@media (min-width: 1367px) and (max-width: 1919px) {
+@media (min-width: 1470px) and (max-width: 1919px) {
     body {
         font-size: 1.1rem;
     }
@@ -511,7 +534,7 @@ section {
         display: flex;
         justify-content: flex-end;
         position: relative; /* Define posição relativa para controle */
-        top: 5rem; /* Ajusta a posição vertical (pode ser modificada conforme necessário) */
+        top: 10rem; /* Ajusta a posição vertical (pode ser modificada conforme necessário) */
         transition: top 0.3s ease; /* Suaviza o movimento */
     }
     #section5 picture img {
@@ -579,7 +602,7 @@ section {
     #section1 {
         justify-content: flex-end; /* Posiciona o conteúdo na parte de baixo */
     }
-    #section1 .content, #section3 .content, #section4 .content, #section5 .content, #section6 .content {
+    #section1 .content, #section3 .content, #section4 .content, #section5 .content{
         display: grid; /* Complementar ao grid */
         gap: 4rem;
     }
@@ -589,7 +612,7 @@ section {
     #section1 h2, #section3 h2, #section4 h2 {
         font-size: 4rem;
     }
-    #section3 li, #section4 li, #section5 p, #section6 p, #section7 p {
+    #section3 li, #section4 li, #section5 p, #section7 p {
         font-size: 3rem;
     }
     #section2 .content p {
@@ -668,14 +691,28 @@ section {
         left: 80%; /* Centraliza a imagem horizontalmente */
         transform: translateX(-40%); /* Garante que a imagem esteja perfeitamente centralizada */
     }
+    #section6 .content {
+        display: grid; /* Complementar ao grid */
+        gap: 3rem; /* Aumenta a distância entre os elementos */
+        align-items: flex-start; /* Alinha todos os itens à esquerda */
+        justify-items: start; 
+    }
+    #section6 p{
+        font-size: 5rem;
+    }
+    #section6 .box p{
+        font-size: 2.5rem;
+    }
     #section6 .box {
         background-color:#e67c25; /* Fundo semitransparente */
         padding: 1.5rem; /* Espaçamento interno */
         border-radius: 8px; /* Bordas arredondadas */
         font-size: 1.5rem; /* Tamanho do texto padrão */
         display: inline-block; /* Centraliza a caixa */
-        max-width: 40rem; /* Largura máxima padrão */
-        margin: 1rem auto; /* Espaçamento externo e centralização */
+        max-width: 50rem; /* Largura máxima padrão */
+        width: 25%; /* Largura total */
+        margin: 0; /* Espaçamento externo e centralização */
+        height: auto; /* Altura automática */
         text-align: center; /* Centraliza o texto dentro da caixa */
         transition: all 0.3s ease; /* Transição suave para mudanças */
     }
